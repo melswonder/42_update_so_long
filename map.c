@@ -6,26 +6,11 @@
 /*   By: hirwatan <hirwatan@student.42tokyo.jp>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/09 20:26:12 by hirwatan          #+#    #+#             */
-/*   Updated: 2025/01/09 21:51:09 by hirwatan         ###   ########.fr       */
+/*   Updated: 2025/01/09 22:17:47 by hirwatan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "so_long.h"
-
-void	save_mapsize(int fd, t_map *m)
-{
-	char	*line;
-
-	line = ft_readline(fd);
-	while (line != NULL)
-	{
-		if (m->height == 0)
-			m->width = ft_strlen(line);
-		m->height++;
-		free(line);
-		line = ft_readline(fd);
-	}
-}
 
 char	*ft_readline(int fd)
 {
